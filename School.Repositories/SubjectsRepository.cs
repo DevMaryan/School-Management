@@ -11,6 +11,7 @@ namespace School.Repositories
         public SubjectsRepository()
         {
             Database = new List<Subject>();
+
             File.AppendAllLines("Subjectz.txt", Database.Select(s => s.Id + " " + s.Name));
         }
         public List<Subject> Database { get; set; }
